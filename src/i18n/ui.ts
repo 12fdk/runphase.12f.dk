@@ -1,9 +1,10 @@
 // All user-facing strings, per language. Keep keys identical across locales;
 // `t()` falls back to English when a Danish string is missing.
 //
-// Copy rules (from the app repo's CLAUDE.md): Runphase is a running coach with
-// strength and warm-ups built in, adapted to life stage. Never call it an
-// "AI coach", and never phrase anything as medical advice.
+// Copy rules: Runphase is a running coach for everyone, with strength and
+// warm-ups built in. Cycle and menopause support is an optional input, not the
+// audience. Never call it an "AI coach", and never phrase anything as medical
+// advice.
 
 export const languages = {
   en: "English",
@@ -16,15 +17,15 @@ export const defaultLocale: Locale = "en";
 
 export const ui = {
   en: {
-    "site.title": "Runphase — running coach for every life stage",
+    "site.title": "Runphase — a running coach with strength and warm-ups built in",
     "site.description":
-      "Runphase is a running coach for women, with strength training and warm-ups built in. Your plan adapts to your life stage, on iPhone and Apple Watch.",
+      "Runphase is a running coach with strength training and warm-ups built into the plan. It adapts to what you log and, if you choose, to your cycle or menopause. On iPhone and Apple Watch.",
     "nav.home": "Home",
     "nav.language": "Language",
     "hero.eyebrow": "Coming soon for iPhone and Apple Watch",
-    "hero.title": "Train properly, in every life stage.",
+    "hero.title": "A running plan that adapts to you.",
     "hero.lede":
-      "A running coach for women, with strength training and warm-ups built into the plan. It adapts to your cycle, perimenopause or postmenopause, and always tells you why.",
+      "A running coach with strength training and warm-ups built into the plan. It adjusts to what you log and, if you choose, to your cycle or menopause, and always tells you why.",
     "hero.cta": "Coming soon to the App Store",
     "footer.publisher": "Runphase is made by 12f ApS, Denmark.",
     "404.title": "Page not found",
@@ -32,15 +33,15 @@ export const ui = {
     "404.back": "Go to the front page",
   },
   da: {
-    "site.title": "Runphase — løbecoach til alle livsfaser",
+    "site.title": "Runphase — løbecoach med styrke og opvarmning bygget ind",
     "site.description":
-      "Runphase er en løbecoach til kvinder, med styrketræning og opvarmning bygget ind. Din plan tilpasser sig din livsfase, på iPhone og Apple Watch.",
+      "Runphase er en løbecoach med styrketræning og opvarmning bygget ind i planen. Den tilpasser sig det, du logger, og hvis du vil, din cyklus eller overgangsalder. På iPhone og Apple Watch.",
     "nav.home": "Forside",
     "nav.language": "Sprog",
     "hero.eyebrow": "Kommer snart til iPhone og Apple Watch",
-    "hero.title": "Træn ordentligt, i alle livsfaser.",
+    "hero.title": "En løbeplan, der tilpasser sig dig.",
     "hero.lede":
-      "En løbecoach til kvinder, med styrketræning og opvarmning bygget ind i planen. Den tilpasser sig din cyklus, perimenopause eller postmenopause, og fortæller altid hvorfor.",
+      "En løbecoach med styrketræning og opvarmning bygget ind i planen. Den justerer sig efter det, du logger, og hvis du vil, efter din cyklus eller overgangsalder, og fortæller altid hvorfor.",
     "hero.cta": "Kommer snart i App Store",
     "footer.publisher": "Runphase er lavet af 12f ApS, Danmark.",
     "404.title": "Siden blev ikke fundet",
