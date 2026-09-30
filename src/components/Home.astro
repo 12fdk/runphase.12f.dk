@@ -1,0 +1,16 @@
+---
+// The front page, shared by every locale (src/pages/index.astro,
+// src/pages/da/index.astro). Placeholder hero until the real sections land.
+import { getLocale, useTranslations } from "../i18n/ui";
+
+const t = useTranslations(getLocale(Astro.url));
+---
+
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">{t("hero.eyebrow")}</p>
+    <h1>{t("hero.title")}</h1>
+    <p class="lede">{t("hero.lede")}</p>
+    <p><span class="button" aria-disabled="true">{t("hero.cta")}</span></p>
+  </div>
+</section>

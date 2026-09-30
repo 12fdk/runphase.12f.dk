@@ -1,0 +1,20 @@
+---
+// GitHub Pages serves this for every missing URL, in any language, so it
+// shows both English and Danish.
+import Layout from "../layouts/Layout.astro";
+import { useTranslations } from "../i18n/ui";
+
+const en = useTranslations("en");
+const da = useTranslations("da");
+---
+
+<Layout title={`${en("404.title")} · Runphase`} noindex>
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">404</p>
+      <h1>{en("404.title")}</h1>
+      <p class="lede">{en("404.body")} <a href="/">{en("404.back")}</a></p>
+      <p class="lede" lang="da">{da("404.body")} <a href="/da/">{da("404.back")}</a></p>
+    </div>
+  </section>
+</Layout>

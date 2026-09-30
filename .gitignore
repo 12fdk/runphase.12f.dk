@@ -1,0 +1,21 @@
+# Astro / build output
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+
+# macOS
+.DS_Store
+
+# Environment
+.env
+.env.production
+
+# Blog cover generation — raw renders are intermediate; only the
+# processed JPEG in public/images/blog/ is committed.
+scripts/covers/

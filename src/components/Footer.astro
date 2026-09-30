@@ -1,0 +1,13 @@
+---
+import { getLocale, useTranslations } from "../i18n/ui";
+
+const t = useTranslations(getLocale(Astro.url));
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <p>{t("footer.publisher")}</p>
+    <p>© {year} <a href="https://12f.dk">12f ApS</a> · <a href="mailto:support@12f.dk">support@12f.dk</a></p>
+  </div>
+</footer>

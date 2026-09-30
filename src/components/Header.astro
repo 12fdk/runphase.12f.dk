@@ -1,0 +1,41 @@
+---
+import {
+  languages,
+  getLocale,
+  stripLocale,
+  localizedPath,
+  useTranslations,
+  type Locale,
+} from "../i18n/ui";
+
+const locale = getLocale(Astro.url);
+const t = useTranslations(locale);
+const path = stripLocale(Astro.url);
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href={localizedPath("/", locale)} aria-label={`Runphase — ${t("nav.home")}`}>
+      <img src="/favicon.svg" alt="" width="32" height="32" />
+      <span>Runphase</span>
+    </a>
+    <nav aria-label={t("nav.language")}>
+      <ul class="lang-switch">
+        {
+          (Object.entries(languages) as [Locale, string][]).map(([l, label]) => (
+            <li>
+              <a
+                href={localizedPath(path, l)}
+                hreflang={l}
+                lang={l}
+                aria-current={l === locale ? "true" : undefined}
+              >
+                {label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
