@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Doc from "../components/Doc.astro";
+import { docs } from "../i18n/ui";
+
+const doc = docs.en.privacy;
+---
+
+<Layout title={`${doc.title} · Runphase`} description={doc.description}>
+  <Doc doc="privacy" />
+</Layout>

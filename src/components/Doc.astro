@@ -1,0 +1,41 @@
+---
+// A long-form page (privacy policy, support), shared by every locale. The
+// text comes from `docs` in src/i18n/ui.ts; pages pass which document to show.
+import { docs, getLocale, useTranslations } from "../i18n/ui";
+
+interface Props {
+  doc: keyof (typeof docs)["en"];
+}
+
+const locale = getLocale(Astro.url);
+const t = useTranslations(locale);
+const doc = docs[locale][Astro.props.doc];
+---
+
+<article class="doc">
+  <div class="container">
+    <header class="doc-header">
+      <h1>{doc.title}</h1>
+      <p class="lede">{doc.lede}</p>
+      <p class="doc-updated">{t("doc.updated")} {doc.updated}</p>
+    </header>
+    {
+      doc.sections.map((section) => (
+        <section id={"id" in section ? section.id : undefined}>
+          <h2>{section.heading}</h2>
+          {section.blocks.map((block) =>
+            typeof block === "string" ? (
+              <p set:html={block} />
+            ) : (
+              <ul>
+                {block.map((item) => (
+                  <li set:html={item} />
+                ))}
+              </ul>
+            ),
+          )}
+        </section>
+      ))
+    }
+  </div>
+</article>

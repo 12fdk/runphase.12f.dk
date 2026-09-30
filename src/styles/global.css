@@ -193,3 +193,67 @@ h1 {
 .site-footer p {
   margin: 0.25rem 0;
 }
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 0 0 0.75rem;
+  padding: 0;
+  list-style: none;
+  font-weight: 600;
+}
+
+/* Long-form pages: privacy policy, support */
+.doc {
+  padding-block: clamp(2.5rem, 8vw, 5rem);
+}
+
+.doc .container > * {
+  max-width: 42rem;
+}
+
+.doc h1 {
+  max-width: none;
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+.doc .lede {
+  margin-bottom: 0.75rem;
+}
+
+.doc-updated {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
+
+.doc-header {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--outline);
+}
+
+.doc section {
+  padding-top: 2rem;
+  scroll-margin-top: 1rem;
+}
+
+.doc h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.375rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.doc p,
+.doc ul {
+  margin: 0 0 1rem;
+}
+
+.doc ul {
+  padding-left: 1.25rem;
+}
+
+.doc li + li {
+  margin-top: 0.35rem;
+}

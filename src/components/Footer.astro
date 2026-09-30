@@ -1,12 +1,19 @@
 ---
-import { getLocale, useTranslations } from "../i18n/ui";
+import { getLocale, localizedPath, useTranslations } from "../i18n/ui";
 
-const t = useTranslations(getLocale(Astro.url));
+const locale = getLocale(Astro.url);
+const t = useTranslations(locale);
 const year = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
   <div class="container">
+    <nav aria-label={t("footer.links")}>
+      <ul class="footer-links">
+        <li><a href={localizedPath("/privacy/", locale)}>{t("footer.privacy")}</a></li>
+        <li><a href={localizedPath("/support/", locale)}>{t("footer.support")}</a></li>
+      </ul>
+    </nav>
     <p>{t("footer.publisher")}</p>
     <p>© {year} <a href="https://12f.dk">12f ApS</a> · <a href="mailto:support@12f.dk">support@12f.dk</a></p>
   </div>
