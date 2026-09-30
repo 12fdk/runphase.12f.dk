@@ -1,6 +1,6 @@
 # runphase.12f.dk
 
-Landing page for [Runphase](https://github.com/12fdk/runphase), a running coach for women across life stages, with strength training and warm-ups built in. Built with [Astro](https://astro.build) and hosted on GitHub Pages at <https://runphase.12f.dk>.
+Landing page for [Runphase](https://github.com/12fdk/runphase), a running coach with strength training and warm-ups built in, that can also adapt to the menstrual cycle and menopause. Built with [Astro](https://astro.build) and hosted on GitHub Pages at <https://runphase.12f.dk>.
 
 ## Development
 
